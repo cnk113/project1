@@ -25,9 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      # Installs pytest
-      - name: Install pytest
-        run: pip install pytest
+      # Installs pytest and seqparser
+      - name: Install pytest and seqparser
+        run: |
+          pip install pytest
+          pip install .
       
       # Tests
       - name: Tests
