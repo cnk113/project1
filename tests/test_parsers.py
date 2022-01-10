@@ -28,7 +28,8 @@ def test_FastaParser():
     your FastaParser class and assert that it properly
     reads in the example Fasta File.
     """
-    pass
+    fa = FastaParser('data/test.fa')
+    assert fa.filename == 'data/test.fa'
 
 
 def test_FastqParser():
@@ -38,4 +39,5 @@ def test_FastqParser():
     your FastqParser class and assert that it properly
     reads in the example Fastq File.
     """
-    pass
+    fq = FastqParser('data/test.fq')
+    assert fq.filename == 'data/test.fq'
